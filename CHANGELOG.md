@@ -1,5 +1,8 @@
 For new methods/callbacks, see the [API](./docs/api.md) page.
 
+## 1.7.26.3.2
+- Fix regression in yesterday's release which caused `utils.ShowHtmlDialog` to crash.
+
 ## 1.7.26.3.1
 - Modernise properties dialog and add dark mode support.
 
