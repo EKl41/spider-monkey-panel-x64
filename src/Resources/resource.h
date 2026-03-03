@@ -117,7 +117,6 @@
 #define IDC_BTN_SAMPLES                  2140
 #define IDC_BTN_STYLE                    2141
 #define IDC_BTN_HELP                     2142
-#define IDC_BTN_DEL                      2143
 
 #define IDC_CHECK_MATCHCASE              2150
 #define IDC_CHECK_WHOLEWORD              2151
