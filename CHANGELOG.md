@@ -1,5 +1,10 @@
 For new methods/callbacks, see the [API](./docs/api.md) page.
 
+## 1.7.26.3.5
+- Remove dead `Delete` button from `Properties` dialog. Full mulit-select,
+keyboard and context menu support has been available since the `1.7.26.3.1`
+revamp.
+
 ## 1.7.26.3.2
 - Fix regression in yesterday's release which caused `utils.ShowHtmlDialog` to crash.
 
