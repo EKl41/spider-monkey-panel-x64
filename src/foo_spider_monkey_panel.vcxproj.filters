@@ -424,7 +424,7 @@
     <ClCompile Include="Utils\image_helpers.cpp">
       <Filter>Utils</Filter>
     </ClCompile>
-    <ClCompile Include="Utils\mainmenu.cpp">
+    <ClCompile Include="Utils\MainMenuCommands_Help.cpp">
       <Filter>Utils</Filter>
     </ClCompile>
     <ClCompile Include="Utils\mainmenu_dynamic.cpp">
@@ -444,6 +444,9 @@
     </ClCompile>
     <ClCompile Include="Utils\zip_utils.cpp">
       <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="FB2K\Callbacks\MainMenuCallback.cpp">
+      <Filter>FB2K\Callbacks</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

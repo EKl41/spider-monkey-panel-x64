@@ -221,7 +221,7 @@ namespace
 
 	GUID MainMenuCommands_Panels::get_parent()
 	{
-		return smp::guid::mainmenu_group_predefined;
+		return smp::guid::mainmenu_group;
 	}
 
 	void MainMenuCommands_Panels::execute(uint32_t /*p_index*/, service_ptr_t<service_base> /*p_callback*/)

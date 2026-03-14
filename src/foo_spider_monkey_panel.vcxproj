@@ -105,6 +105,7 @@ copy /Y "%mozjs_dir%mozjs-102.dll" "%component_path%"</Command>
     <ClCompile Include="FB2K\Callbacks\ConsoleNotify.cpp" />
     <ClCompile Include="FB2K\Callbacks\DSPConfigCallback.cpp" />
     <ClCompile Include="FB2K\Callbacks\LibraryCallback.cpp" />
+    <ClCompile Include="FB2K\Callbacks\MainMenuCallback.cpp" />
     <ClCompile Include="FB2K\Callbacks\MetadbIOCallback.cpp" />
     <ClCompile Include="FB2K\Callbacks\OutputConfigChangeCallback.cpp" />
     <ClCompile Include="FB2K\Callbacks\PlaybackQueueCallback.cpp" />
@@ -216,7 +217,7 @@ copy /Y "%mozjs_dir%mozjs-102.dll" "%component_path%"</Command>
     <ClCompile Include="Utils\guid_helpers.cpp" />
     <ClCompile Include="Utils\hook_handler.cpp" />
     <ClCompile Include="Utils\image_helpers.cpp" />
-    <ClCompile Include="Utils\mainmenu.cpp" />
+    <ClCompile Include="Utils\MainMenuCommands_Help.cpp" />
     <ClCompile Include="Utils\mainmenu_dynamic.cpp" />
     <ClCompile Include="Utils\menu_helpers.cpp" />
     <ClCompile Include="Utils\thread_pool.cpp" />
