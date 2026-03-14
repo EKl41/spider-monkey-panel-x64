@@ -5,7 +5,7 @@ namespace
 	class MainMenuCallback : public mainmenu_commands
 	{
 	public:
-		GUID get_command(uint32_t index) noexcept final
+		GUID get_command(uint32_t index) final
 		{
 			switch (index)
 			{
@@ -23,12 +23,12 @@ namespace
 			}
 		}
 
-		GUID get_parent() noexcept final
+		GUID get_parent() final
 		{
 			return smp::guid::mainmenu_group;
 		}
 
-		bool get_description(uint32_t index, pfc::string_base& out) noexcept final
+		bool get_description(uint32_t index, pfc::string_base& out) final
 		{
 			if (index >= count)
 				FB2K_BugCheck();
@@ -37,7 +37,7 @@ namespace
 			return true;
 		}
 
-		bool get_display(uint32_t index, pfc::string_base& out, uint32_t& flags) noexcept final
+		bool get_display(uint32_t index, pfc::string_base& out, uint32_t& flags) final
 		{
 			if (index >= count)
 				FB2K_BugCheck();
@@ -47,12 +47,12 @@ namespace
 			return true;
 		}
 
-		uint32_t get_command_count() noexcept final
+		uint32_t get_command_count() final
 		{
 			return count;
 		}
 
-		void execute(uint32_t index, service_ptr_t<service_base>) noexcept final
+		void execute(uint32_t index, service_ptr_t<service_base>) final
 		{
 			if (index >= count)
 				FB2K_BugCheck();
@@ -60,7 +60,7 @@ namespace
 			smp::EventDispatcher::Get().PutEventToAll(smp::GenerateEvent_JsCallback(smp::EventId::kStaticMainMenu, ++index), smp::EventPriority::kInput);
 		}
 
-		void get_name(uint32_t index, pfc::string_base& out) noexcept final
+		void get_name(uint32_t index, pfc::string_base& out) final
 		{
 			if (index >= count)
 				FB2K_BugCheck();
