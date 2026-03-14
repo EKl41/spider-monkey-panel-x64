@@ -44,6 +44,3 @@ inet_ntop.c and inet_pton.c Notice:
  *
  * SPDX-License-Identifier: ISC
  */
-
-
-

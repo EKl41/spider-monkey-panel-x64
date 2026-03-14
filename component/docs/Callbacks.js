@@ -8,7 +8,7 @@
 
 /**
  * Called when "Always On Top" state changes: from using the menu, Alt + A, {@link fb.AlwaysOnTop} and etc.
- * 
+ *
  * @param {boolean} state
  */
 function on_always_on_top_changed(state) { }
@@ -24,7 +24,7 @@ function on_char(code) { }
 /**
  * Called when colours are changed via default UI/columns UI preferences.<br>
  * Note: use {@link window.GetColourCUI}/{@link window.GetColourDUI} to get new colours.
- * 
+ *
  */
 function on_colours_changed() { }
 
@@ -90,7 +90,7 @@ function on_focus(is_focused) { }
 /**
  * Called when fonts are changed via DUI or CUI preferences.
  * Note: you can retrieve fonts using {@link window.GetFontDUI}/{@link window.GetFontCUI}.
- * 
+ *
  */
 function on_font_changed() { }
 
@@ -177,7 +177,7 @@ function on_load_image_done(cookie, image, image_path) { }
  * Deprecated: use {@link module:callbacks~on_main_menu_dynamic on_main_menu_dynamic} instead.
  *
  * @deprecated
- * 
+ *
  * @param {number} index
  *
  * @example
@@ -287,7 +287,7 @@ function on_mouse_rbtn_down(x, y, mask) { }
  * @param {number} x
  * @param {number} y
  * @param {number} mask see Flags.js > Mask
- * 
+ *
  * @retuen {boolean}}
  */
 function on_mouse_rbtn_up(x, y, mask) { }
@@ -298,7 +298,7 @@ function on_mouse_rbtn_up(x, y, mask) { }
  * @param {number} step scroll direction: -1 or 1
  */
 function on_mouse_wheel(step) { }
-// 
+//
 
 /**
  * Scroll left/right
@@ -328,7 +328,7 @@ function on_notify_data(name, info) { }
 /**
  * Called when output device changes. Use {@link fb.GetOutputDevices} to retrieve settings.<br>
  * Note: available only in foobar2000 v1.4 and later.
- * 
+ *
  * @function
  */
 function on_output_device_changed() { }
@@ -380,7 +380,7 @@ function on_playback_new_track(handle) { }
 /**
  * Called when playback order is changed.
  *
- * @param {any} new_order_index 
+ * @param {any} new_order_index
  *     - 0 Default<br>
  *     - 1 Repeat (Playlist)<br>
  *     - 2 Repeat (Track)<br>
@@ -422,7 +422,7 @@ function on_playback_seek(time) { }
  *     - 5 Plays a random track from the current playlist<br>
  *     - 6 resume (internal fb2k value)
  * @param {boolean} is_paused Current paused state
- * 
+ *
  */
 function on_playback_starting(cmd, is_paused) { }
 

@@ -18,7 +18,7 @@
  * @param {object=} [options=undefined]
  * @param {boolean=} [options.always_evaluate=false] If true, evaluates the script even if it was included before.
  *
- * @example <caption>Include sample from `foo_spider_monkey_panel`</caption> 
+ * @example <caption>Include sample from `foo_spider_monkey_panel`</caption>
  * include('samples/complete/properties.js')
  */
 function include(path, options) { }
@@ -75,19 +75,19 @@ function ActiveXObject(name) {
      * Creates an `ActiveXObject` that contains an object of type (VT_ARRAY|SOME_TYPE).
      *
      * @static
-     * 
+     *
      * @param {Array<*>} arr An array that contains elements of primitive type.
      * @param {number} element_variant_type A variant type of array elements.
      *
      * @return {ActiveXObject}
-     * 
+     *
      * @example
      * let filename = 'x:\\file.bin';
      * let bin_data = [0x01, 0x00, 0x00, 0x02]
      * let com_bin_data = ActiveXObject.ActiveX_CreateArray(bin_data, 0x11) // VT_UI1
-     * 
+     *
      * let stm = new ActiveXObject('ADODB.Stream');
-     * 
+     *
      * stm.Open();
      * stm.Type = 1; //adTypeBinary
      * stm.Write(com_bin_data);
@@ -124,12 +124,12 @@ function ActiveXObject(name) {
 
 /**
  * Deprecated: use `for ... of` loop instead.
- * 
+ *
  * @deprecated
- * 
+ *
  * @constructor
  * @param {ActiveXObject} active_x_object Any ActiveX collection object.
- * 
+ *
  * @example
      * let e = new Enumerator(active_x_object);
      * for (e.moveFirst(); !e.atEnd(); e.moveNext()) {
@@ -348,7 +348,7 @@ let fb = {
      * Deprecated: use {@link FbMetadbHandleList} constructor instead.
      *
      * @deprecated
-     * 
+     *
      * @return {FbMetadbHandleList}
      */
     CreateHandleList: function () { }, // (FbMetadbHandleList)
@@ -393,7 +393,7 @@ let fb = {
      * <br>
      * Related callbacks: {@link module:callbacks~on_drag_enter on_drag_enter, {@link module:callbacks~on_drag_drop on_drag_drop},
      * {@link module:callbacks~on_drag_over on_drag_over}, {@link module:callbacks~on_drag_leave on_drag_leave}
-     * 
+     *
      * @param {number} window_id unused
      * @param {FbMetadbHandleList} handle_list
      * @param {number} effect Allowed effects.
@@ -441,7 +441,7 @@ let fb = {
      * Returns a JSON array in string form so you need to use JSON.parse() on the result.
      * <br>
      * Related methods: {@link fb.SetDSPPreset}.
-     * 
+     *
      * @return {string}
      *
      * @example
@@ -506,7 +506,7 @@ let fb = {
      * Returns a JSON array in string form so you need to use JSON.parse() on the result.
      * <br>
      * Related methods: {@link fb.SetOutputDevice}.
-     * 
+     *
      * @return {string}
      *
      * @example
@@ -657,7 +657,7 @@ let fb = {
      * <br>
      * Related methods: {@link fb.UnregisterMainMenuCommand}<br>
      * Related callbacks: {@link module:callbacks~on_main_menu_dynamic on_main_menu_dynamic}
-     * 
+     *
      * @param {number} id
      * @param {string} name
      * @param {string=} [description='']
@@ -1043,7 +1043,7 @@ let plman = {
 
     /**
      * Returns the list of blocked actions
-     * 
+     *
      * @param {number} playlistIndex
      * @return {Array<string>} May contain the following:<br>
      *   - 'AddItems'<br>
@@ -1126,7 +1126,7 @@ let plman = {
      * Deprecated: use {@link plman.GetPlaylistLockedActions}.
      *
      * @deprecated
-     * 
+     *
      * @param {number} playlistIndex
      * @return {boolean}
      */
@@ -1267,8 +1267,8 @@ let plman = {
      * Blocks requested actions.<br>
      * Note: the lock can be changed only if there is no lock or if it's owned by `foo_spider_monkey_panel`.
      * The owner of the lock can be checked via {@link plman.GetPlaylistLockName}.
-     * 
-     * 
+     *
+     *
      * @param {number} playlistIndex
      * @param {Array<string>} lockedActions May contain the following:<br>
      *   - 'AddItems'<br>
@@ -1361,7 +1361,7 @@ let plman = {
      * Note: this method should be called before performing modification to the playlist.<br>
      * <br>
      * Related methods: {@link plman.IsRedoAvailable}, {@link plman.IsUndoAvailable}, {@link plman.Redo}, {@link plman.Undo}
-     * 
+     *
      * @param {number} playlistIndex
      */
     UndoBackup: function (playlistIndex) { }, // (void)
@@ -1496,7 +1496,7 @@ let utils = {
     /**
      * Detect the codepage of the file.\n
      * Note: detection algorithm is probability based (unless there is a UTF BOM),
-     * i.e. even though the returned codepage is the most likely one, 
+     * i.e. even though the returned codepage is the most likely one,
      * there's no 100% guarantee it's the correct one.\n
      * Performance note: detection algorithm is quite slow, so results should be cached as much as possible.
      *
@@ -1526,7 +1526,7 @@ let utils = {
      * {@link utils.IsDirectory}, {@link utils.IsFile} and {@link utils.SplitFilePath} instead.
      *
      * @deprecated
-     * 
+     *
      * @param {string} path
      * @param {string} mode
      *     "chardet" - Detects the codepage of the given file. Returns a corresponding codepage number on success, 0 if codepage detection failed.<br>
@@ -1645,7 +1645,7 @@ let utils = {
 
     /**
      * Note: returned directories are not guaranteed to exist.
-     * 
+     *
      * @typedef {Object} JsPackageDirs
      * @property {string} Root Root directory of the package
      * @property {string} Assets Directory inside package folder that contains assets
@@ -1663,7 +1663,7 @@ let utils = {
 
     /**
      * Get information about a package with the specified id.<br>
-     * 
+     *
      * @param {string} package_id
      * @return {?JsPackageInfo} null if not found, package information otherwise
      */
@@ -1674,9 +1674,9 @@ let utils = {
      * Throws exception if package is not found. <br>
      * <br>
      * Deprecated: use {@link window.GetPackageInfo} instead.
-     * 
+     *
      * @deprecated
-     * 
+     *
      * @param {string} package_id
      * @return {string}
      */
@@ -1945,18 +1945,18 @@ let window = {
 
     /**
     * Return value of {@link window.JsMemoryStats}.<br>
-    * 
+    *
     * @typedef {Object} JsMemoryStats
     * @property {number} MemoryUsage Memory usage of the current panel (in bytes)
     * @property {number} TotalMemoryUsage Total memory usage of all panels (in bytes)
-    * @property {number} TotalMemoryLimit 
+    * @property {number} TotalMemoryLimit
     *    Maximum allowed memory usage for the component (in bytes).<br>
     *    If the total memory usage exceeds this value, all panels will fail with OOM error.
     */
 
     /**
      * Get memory statistics for JavaScript engine.
-     * 
+     *
      * @type {JsMemoryStats}
      * @readonly
      */
@@ -1990,7 +1990,7 @@ let window = {
      * Deprecated: use {@link window.JsMemoryStats.total_memory_limit} instead.
      *
      * @deprecated
-     * 
+     *
      * @type {number}
      * @readonly
      */
@@ -2024,7 +2024,7 @@ let window = {
      * Deprecated: use {@link window.JsMemoryStats.memory_usage} instead.
      *
      * @deprecated
-     * 
+     *
      * @type {number}
      * @readonly
      */
@@ -2033,7 +2033,7 @@ let window = {
     /**
     * Return value of {@link window.ScriptInfo}.<br>
     * Note: package_id is only present when the panel script is a package.
-    * 
+    *
     * @typedef {Object} ScriptInfo
     * @property {string} Name
     * @property {string} [Author]
@@ -2063,7 +2063,7 @@ let window = {
      * Deprecated: use {@link window.JsMemoryStats.total_memory_usage} instead.
      *
      * @deprecated
-     * 
+     *
      * @type {number}
      * @readonly
      */
@@ -2111,7 +2111,7 @@ let window = {
     /**
      * Setup the script information.<br>
      * Can be called only once for the whole panel.
-     * 
+     *
      * @param {string} name Script name
      * @param {object=} [options={}]
      * @param {string=} [options.author=''] Script author
@@ -2152,7 +2152,7 @@ let window = {
      * Deprecated: use {@link fb.Tooltip} and {@link FbTooltip.SetFont} instead.
      *
      * @deprecated
-     * 
+     *
      * @param {string=} [font_name='Segoe UI']
      * @param {number=} [font_size_px=12]
      * @param {number=} [font_style=0] See Flags.js > FontStyle
@@ -2216,13 +2216,13 @@ let window = {
      *
      * @param {string} name
      * @param {*} info
-     * 
+     *
      * @example
-     * let data = { 
+     * let data = {
      *    // some data
      * };
      * window.NotifyOthers('have_some_data', data);
-     * 
+     *
      * data = null; // stop using the object immediately
      * // AddSomeAdditionalValues(data); // don't try to modify it, since it will affect the object in the other panel as well
      */
@@ -2305,7 +2305,7 @@ let window = {
      * Deprecated: use {@link window.ShowConfigureV2} to configure panel and {@link window.EditScript} to edit script.
      *
      * @deprecated
-     * 
+     *
      * @method
      */
     ShowConfigure: function () { }, // (void)
@@ -3009,7 +3009,7 @@ function FbTooltip() {
      * Note: this also updates text on the active tooltip
      * i.e. there is no need to manually cycle Deactivate()/Activate()
      * to update text.
-     * 
+     *
      * @type {string}
      *
      * @example
@@ -3120,7 +3120,7 @@ function FbUiSelectionHolder() {
      * Sets the selected items.
      *
      * @param {FbMetadbHandleList} handle_list
-     * 
+     *
      * @param {number} [type=0] Selection type. Possible values:<br>
      *     0 - default, undefined<br>
      *     1 - active_playlist_selection<br>
@@ -3129,7 +3129,7 @@ function FbUiSelectionHolder() {
      *     4 - now_playing<br>
      *     5 - keyboard_shortcut_list<br>
      *     6 - media_library_viewer
-     * 
+     *
      */
     this.SetSelection = function (handle_list, type) { }; // (void)
 
@@ -3368,14 +3368,14 @@ function GdiGraphics() {
 
     /**
      * Calculates text width for {@link GdiGraphics#GdiDrawText}.
-     * 
-     * Note: When the str contains a kerning pair that is found in the specified 
+     *
+     * Note: When the str contains a kerning pair that is found in the specified
      * font, the return value will be larger than the actual drawn width of the
      * text. If accurate values are required, set use_exact to true.
      *
      * @param {string} str
      * @param {GdiFont} font
-     * @param {boolean=} [use_exact=false] Uses a slower, but more accurate method of calculating text width which accounts for kerning pairs.  
+     * @param {boolean=} [use_exact=false] Uses a slower, but more accurate method of calculating text width which accounts for kerning pairs.
      * @return {number}
      */
     this.CalcTextWidth = function (str, font, use_exact) { }; // (uint)
@@ -3734,7 +3734,7 @@ function DropTargetAction() {
     /**
      * True, if the drag session was started by {@link fb.DoDragDrop}.
      * False, otherwise.
-     * 
+     *
      * @type {boolean}
      * @readonly
      */
